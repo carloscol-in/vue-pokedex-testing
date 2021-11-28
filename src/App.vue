@@ -74,6 +74,7 @@ export default {
   },**/
   
   setData(data) {
+    this.changeTest += 1;
     try {
       let randomSearch = Math.floor(Math.random()*3)
       data = data.mock[randomSearch].data
@@ -83,8 +84,6 @@ export default {
       this.abilities = data.abilities
       this.image = data.sprites
       this.type = data.type
-      this.changeTest++;
-      
     } catch (error) {
       console.log(error)
     }
